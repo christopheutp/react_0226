@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 import MonPremierComposant from './MonPremierComposant'
 import InlineCard from './demo-css/InlineCard'
+import PropsDemo from './demo-props/PropsDemo'
+import ConditionalDemo from './demo-conditional/ConditionalDemo'
+import ListDemo from './demo-list/ListDemo'
 
 function App() {
  
@@ -18,6 +21,9 @@ function App() {
     <MonPremierComposant/>
     <MonPremierComposant/>
     <InlineCard />
+    <PropsDemo />
+    <ConditionalDemo />
+    <ListDemo />
     </>
 
   )
