@@ -7,13 +7,17 @@ import InlineCard from './demo-css/InlineCard'
 import PropsDemo from './demo-props/PropsDemo'
 import ConditionalDemo from './demo-conditional/ConditionalDemo'
 import ListDemo from './demo-list/ListDemo'
+import DemoEffect from './demo-useeffect/DemoEffect'
+import ApiDemo from './demo-api/ApiDemo'
+import AppCounter from './demo-hook-perso/AppCounter'
+import MyCounter from './demo-hook-perso/MyCounter'
 
 function App() {
  
 
   return (
     <>
-    <h1>Ma premiere Applciation React !!!</h1>
+    {/* <h1>Ma premiere Applciation React !!!</h1>
     <h2>Voici mon premier composant </h2>
     <div> Du texte dans ma div </div>
     <MonPremierComposant/>
@@ -23,7 +27,11 @@ function App() {
     <InlineCard />
     <PropsDemo />
     <ConditionalDemo />
-    <ListDemo />
+    <ListDemo /> */}
+    {/* <DemoEffect />
+    <ApiDemo /> */}
+    <AppCounter />
+    <MyCounter />
     </>
 
   )
