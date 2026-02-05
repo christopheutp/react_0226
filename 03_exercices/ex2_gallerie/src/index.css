@@ -1,0 +1,127 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22d3ee;
+  --tag: #1f2937;
+  --tag-active: #0ea5b7;
+  --border: #1f2937;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 20% -10%, #1f2937 0, var(--bg) 50%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+}
+
+.page {
+  max-width: 1100px;
+  margin: 36px auto 60px;
+  padding: 0 16px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+.subtitle {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 18px;
+}
+
+.tag {
+  background: var(--tag);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.tag.active {
+  background: var(--tag-active);
+  border-color: var(--tag-active);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 520px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-caption {
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+.card-title { font-size: 16px; }
+.card-meta { color: var(--muted); font-size: 12px; }
+
+.card-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 6px 0 0; list-style: none;
+}
+.tag.small {
+  font-size: 12px; padding: 4px 8px; background: #0b1220; border-color: #263242;
+}
+
+.empty {
+  text-align: center; color: var(--muted); margin: 80px 0;
+}
+.empty span { display: block; font-size: 40px; margin-bottom: 10px; }
+
+.skeleton {
+  padding: 12px;
+}
+.sk-img {
+  height: 220px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0b1220 25%, #111827 37%, #0b1220 63%);
+  background-size: 400% 100%;
+  animation: shine 1.2s infinite linear;
+}
+.sk-line {
+  height: 12px; margin-top: 10px; border-radius: 6px;
+  background: linear-gradient(90deg, #0b1220 25%, #111827 37%, #0b1220 63%);
+  background-size: 400% 100%;
+  animation: shine 1.2s infinite linear;
+}
+.sk-line.short { width: 60%; }
+
+@keyframes shine {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
