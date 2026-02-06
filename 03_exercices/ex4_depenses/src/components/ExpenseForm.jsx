@@ -60,7 +60,7 @@ export default function ExpenseForm() {
 
       <div className="form-row">
         <label htmlFor="category">Catégorie</label>
-        <select id="category" ref={categoryRef} defaultValue="food">
+        <select id="category" ref={categoryRef} defaultValue="Alimentation">
           {CATEGORIES.map((c) => (
             <option key={c.value} value={c.value}>
               {c.label}
